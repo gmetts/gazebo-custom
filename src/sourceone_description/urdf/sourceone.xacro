@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="sourceone_drone" >
+
+  <xacro:include filename="$(find sourceone_description)/urdf/sourceone.gazebo" />
+
+  <link
+    name="sourceone_base">
+    <inertial>
+      <origin
+        xyz="5.5996E-06 -0.0019216 0.037452"
+        rpy="0 0 0" />
+      <mass
+        value="0.40322" />
+      <inertia
+        ixx="0.00024641"
+        ixy="-2.0113E-10"
+        ixz="1.0745E-15"
+        iyy="0.00012483"
+        iyz="-6.0158E-08"
+        izz="0.00034464" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sourceone_description/meshes/sourceone_base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sourceone_description/meshes/sourceone_base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="FR_Prop">
+    <inertial>
+      <origin
+        xyz="-4.6291E-06 -1.1191E-05 0.031118"
+        rpy="0 0 0" />
+      <mass
+        value="0.003047" />
+      <inertia
+        ixx="1.018E-06"
+        ixy="-6.5365E-10"
+        ixz="-2.3152E-11"
+        iyy="1.0166E-06"
+        iyz="-4.2569E-11"
+        izz="1.9901E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sourceone_description/meshes/FR_Prop.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.19608 1 0.26667 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sourceone_description/meshes/FR_Prop.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_Prop_Cont"
+    type="continuous">
+    <origin
+      xyz="0.089688 0.068739 0"
+      rpy="0 0 0" />
+    <parent
+      link="sourceone_base" />
+    <child
+      link="FR_Prop" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BR_Prop">
+    <inertial>
+      <origin
+        xyz="1.2505E-05 -1.6499E-06 0.031118"
+        rpy="0 0 0" />
+      <mass
+        value="0.003047" />
+      <inertia
+        ixx="1.0166E-06"
+        ixy="5.2402E-10"
+        ixz="2.9629E-11"
+        iyy="1.0184E-06"
+        iyz="-1.2409E-11"
+        izz="1.9905E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sourceone_description/meshes/BR_Prop.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.19608 1 0.26667 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sourceone_description/meshes/BR_Prop.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BR_Prop_Cont"
+    type="continuous">
+    <origin
+      xyz="0.089688 -0.068739 0"
+      rpy="0 0 0" />
+    <parent
+      link="sourceone_base" />
+    <child
+      link="BR_Prop" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FL_Prop">
+    <inertial>
+      <origin
+        xyz="-4.6125E-06 -1.1081E-05 0.031118"
+        rpy="0 0 0" />
+      <mass
+        value="0.003047" />
+      <inertia
+        ixx="1.018E-06"
+        ixy="-6.5036E-10"
+        ixz="-2.3207E-11"
+        iyy="1.0166E-06"
+        iyz="-4.285E-11"
+        izz="1.9901E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sourceone_description/meshes/FL_Prop.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.19608 1 0.26667 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sourceone_description/meshes/FL_Prop.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_Prop_Cont"
+    type="continuous">
+    <origin
+      xyz="-0.089688 0.068739 0"
+      rpy="0 0 0" />
+    <parent
+      link="sourceone_base" />
+    <child
+      link="FL_Prop" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BL_Prop">
+    <inertial>
+      <origin
+        xyz="-1.8495E-06 -2.0389E-07 0.031118"
+        rpy="0 0 0" />
+      <mass
+        value="0.0030463" />
+      <inertia
+        ixx="1.0169E-06"
+        ixy="-1.8239E-10"
+        ixz="-2.9073E-11"
+        iyy="1.0166E-06"
+        iyz="-4.6257E-11"
+        izz="1.9891E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sourceone_description/meshes/BL_Prop.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.19608 1 0.26667 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sourceone_description/meshes/BL_Prop.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BL_Prop_Cont"
+    type="continuous">
+    <origin
+      xyz="-0.089688 -0.068739 0"
+      rpy="0 0 0" />
+    <parent
+      link="sourceone_base" />
+    <child
+      link="BL_Prop" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+</robot>

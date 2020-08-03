@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <name>sourceone_description</name>
+  <version>0.0.0</version>
+  <description>Source One airframe URDF description</description>
+
+  <author email="gmetts@andrew.cmu.edu">Grant Metts</author>
+  
+  <maintainer email="gmetts@andrew.cmu.edu">Grant Metts</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <run_depend>joint_state_publisher</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>rviz</run_depend>
+
+  <export>
+  </export>
+</package>
